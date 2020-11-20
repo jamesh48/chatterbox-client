@@ -20,7 +20,16 @@ var App = {
   fetch: function(callback = ()=>{}) {
     Parse.readAll((data) => {
       // examine the response from the server request:
-      console.log(data.username);
+      console.log(data);
+      for (var i = 0; i < data.results.length; i++) {
+        var userName = data.results[i].username;
+        var message = data.results[i].text;
+        var timeCreated = data.results[i].createdAt;
+        var roomName = data.results[i].roomname;
+        // $(data.results[i].username).appendTo('#chats');
+
+        $('#chats').append(`<div><span>${userName}</span><span>${message}</span><span>${timeCreated}</span><span>${roomName}</span></div>`);
+      }
 
       callback();
     });
