@@ -21,14 +21,12 @@ var App = {
     Parse.readAll((data) => {
       // examine the response from the server request:
       console.log(data);
-      for (var i = 0; i < data.results.length; i++) {
-        var userName = data.results[i].username;
-        var message = data.results[i].text;
-        var timeCreated = data.results[i].createdAt;
-        var roomName = data.results[i].roomname;
-        // $(data.results[i].username).appendTo('#chats');
 
-        $('#chats').append(`<div><span>${userName}</span><span>${message}</span><span>${timeCreated}</span><span>${roomName}</span></div>`);
+
+      for (var i = 0; i < data.results.length; i++) {
+        let html = '';
+        html += MessageView.render(data.results[i]);
+        $('#chats').append(html);
       }
 
       callback();
