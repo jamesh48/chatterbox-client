@@ -23,6 +23,9 @@ var App = {
       console.log(data);
 
       for (var i = 0; i < data.results.length; i++) {
+        if (data.results[i].text === undefined) {
+          data.results[i].text = '';
+        }
         let html = '';
         html += MessageView.render(data.results[i]);
         $('#chats').append(html);

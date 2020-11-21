@@ -88,3 +88,15 @@ form input[type=text] {
     background-color: #0090da;
 }
 
+.messageform {
+    background-color: lightblue;
+}
+
+.newForm {
+    background-color: lightsalmon;
+}
+
+/* .cool-button {
+    position: relative;
+    display: inline-block;
+} */
