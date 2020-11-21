@@ -22,7 +22,6 @@ var App = {
       // examine the response from the server request:
       console.log(data);
 
-
       for (var i = 0; i < data.results.length; i++) {
         let html = '';
         html += MessageView.render(data.results[i]);
