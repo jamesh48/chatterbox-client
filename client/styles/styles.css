@@ -96,6 +96,28 @@ form input[type=text] {
     background-color: lightsalmon;
 }
 
+.username, .message, .roomname, .created-at {
+    position: relative;
+    left: 2.5%;
+    font-weight: 500;
+    color: darkslategrey;
+}
+
+.message {
+    font-size: 14px;
+}
+
+.roomname {
+    color: lightseagreen;
+    font-weight: 300;
+    text-decoration: underline;
+}
+
+.created-at {
+    text-decoration: none;
+    font-weight: 300;
+    color: darkslategrey;
+}
 /* .cool-button {
     position: relative;
     display: inline-block;

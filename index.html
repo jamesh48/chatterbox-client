@@ -27,12 +27,18 @@
       <div class="spinner"><img src="client/images/spiffygif_46x46.gif"></div>
       <div id="rooms">
         Room:
-        <select></select>
-        <form class='newForm' action="#" id="send" method="post">
-          <input type="text" name="rooms" id="roomsInput"/>
-          <button class ='cool-button'>Add Room</button>
-          <!-- <input type="submit" name="rooms"> -->
-        </form>
+        <select onchange="Rooms.add(event);">
+          <!-- <option>
+            New Room
+          </option>
+          <option>
+            test
+          </option> -->
+        </select>
+        <!-- <form class='newForm' action="#" id="send" method="post"> -->
+          <!-- <input type="text" name="rooms" id="roomsInput"/> -->
+          <!-- <button class ='cool-button'>Add Room</button> -->
+        <!-- </form> -->
       </div>
       <form class ="messageform" action="#" id="send" method="post">
         <input type="text" name="message" id="message"/>
