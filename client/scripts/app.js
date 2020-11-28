@@ -49,7 +49,11 @@ var App = {
             continue;
           }
           let html = '';
-          html += MessageView.render(data.results[i]);
+          if (Friends.friendArray.includes(data.results[i].username)) {
+            html += MessageView.renderFriend(data.results[i]);
+          } else {
+            html += MessageView.render(data.results[i]);
+          }
           $('#chats').append(html);
           continue;
         }

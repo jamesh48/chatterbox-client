@@ -115,10 +115,10 @@ describe('chatterbox', function() {
       sinon.spy(Parse, 'create');
 
       App.initialize();
-      $('.test').trigger('submit');
       $('#message').val('Why so many Mel Brooks quotes?');
       $('form .submit').trigger('submit');
-      // alert($('form .submit').attr('class'));
+      // $('form .submit').trigger('submit');
+      // alert($('.submit').attr('class'));
       expect(Parse.create.called).to.be.true;
 
       Parse.create.restore();

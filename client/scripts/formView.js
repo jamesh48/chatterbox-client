@@ -11,6 +11,7 @@ var FormView = {
     // Stop the browser from submitting the form
     event.preventDefault();
     if ($('.drop-down').val() === 'Select Room') {
+      alert('Please Select a Room');
       return;
     }
     var message = {
