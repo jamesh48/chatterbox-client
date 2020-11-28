@@ -10,7 +10,6 @@ var App = {
     FormView.initialize();
     RoomsView.initialize();
     MessagesView.initialize();
-    $('.drop-down').val('lobby');
     // Fetch initial batch of messages
     App.startSpinner();
     App.fetch(null, App.stopSpinner);
