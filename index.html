@@ -27,7 +27,8 @@
       <div class="spinner"><img src="client/images/spiffygif_46x46.gif"></div>
       <div id="rooms">
         Room:
-        <select onchange="Rooms.add(event);">
+        <select class="drop-down" onchange="Rooms.add(event);">
+          <option selected="selected">Select Room</option>
           <!-- <option>
             New Room
           </option>
@@ -40,6 +41,9 @@
           <!-- <button class ='cool-button'>Add Room</button> -->
         <!-- </form> -->
       </div>
+      <!-- <div id="friends">
+        <select>Friends</select>
+      </div> -->
       <form class ="messageform" action="#" id="send" method="post">
         <input type="text" name="message" id="message"/>
         <input type="submit" name="submit" class="submit"/>

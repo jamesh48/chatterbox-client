@@ -10,16 +10,18 @@ var App = {
     FormView.initialize();
     RoomsView.initialize();
     MessagesView.initialize();
-
+    $('.drop-down').val('lobby');
     // Fetch initial batch of messages
     App.startSpinner();
-    App.fetch(App.stopSpinner);
-
+    App.fetch(null, App.stopSpinner);
   },
 
   storage: [],
 
-  fetch: function(roomName) {
+  fetch: function(roomName, stopSpinner) {
+    if (stopSpinner !== undefined) {
+      stopSpinner();
+    }
     $('#chats').empty();
     Parse.readAll((data) => {
       // examine the response from the server request:
@@ -52,7 +54,6 @@ var App = {
           $('#chats').append(html);
           continue;
         }
-
         //Appends messages to chats
         let html = '';
         html += MessageView.render(data.results[i]);

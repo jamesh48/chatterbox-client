@@ -12,18 +12,20 @@ var FormView = {
     var message = {
       username: App.username,
       text: $('#message').val(),
-      roomname: 'lobby'
+      roomname: $('.drop-down').val()
     };
+    // console.log($('.drop-down').val());
     console.log(message);
     // console.log(data);
     MessagesView.renderMessage(message);
     console.log('click!');
 
     Parse.create(message);
-    $('#chats').empty();
+    // $('#chats').empty();
 
     App.startSpinner();
-    App.fetch(App.stopSpinner);
+    // App.fetch(App.stopSpinner);
+    App.fetch(message.roomname, App.stopSpinner);
 
   },
 
