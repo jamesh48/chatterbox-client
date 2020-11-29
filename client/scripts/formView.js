@@ -7,7 +7,6 @@ var FormView = {
   },
 
   handleSubmit: function(event) {
-    alert('here');
     // Stop the browser from submitting the form
     event.preventDefault();
     if ($('.drop-down').val() === 'Select Room') {
