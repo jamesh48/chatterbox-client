@@ -1,7 +1,7 @@
 var MessagesView = {
 
   $chats: $('#chats'),
-  // $messages: $('#messages'),
+  $messages: $('#messages'),
 
   initialize: function() {
   },

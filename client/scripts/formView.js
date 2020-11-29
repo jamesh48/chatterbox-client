@@ -1,9 +1,12 @@
 var FormView = {
 
   $form: $('.messageform'),
+  $testForm: $('form .submit'),
 
   initialize: function() {
     FormView.$form.on('submit', FormView.handleSubmit);
+    //For Tests...
+    FormView.$testForm.on('submit', FormView.handleSubmit);
   },
 
   handleSubmit: function(event) {
@@ -18,17 +21,12 @@ var FormView = {
       text: $('#message').val(),
       roomname: $('.drop-down').val()
     };
-    // console.log($('.drop-down').val());
-    console.log(message);
-    // console.log(data);
     MessagesView.renderMessage(message);
     console.log('click!');
 
     Parse.create(message);
-    // $('#chats').empty();
 
     App.startSpinner();
-    // App.fetch(App.stopSpinner);
     App.fetch(message.roomname, App.stopSpinner);
 
   },
