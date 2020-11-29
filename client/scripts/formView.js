@@ -16,6 +16,7 @@ var FormView = {
       alert('Please Select a Room');
       return;
     }
+
     var message = {
       username: App.username,
       text: $('#message').val(),

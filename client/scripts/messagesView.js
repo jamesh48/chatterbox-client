@@ -1,7 +1,6 @@
 var MessagesView = {
 
   $chats: $('#chats'),
-  $messages: $('#messages'),
 
   initialize: function() {
   },
@@ -15,7 +14,6 @@ var MessagesView = {
     $('<p></p>').text(message.text).appendTo(newMessage);
     $('<p></p>').text(message.roomname).appendTo(newMessage);
     newMessage.appendTo(MessagesView.$chats);
-    // $messages.appendTo($chats);
   },
 
 };
