@@ -76,3 +76,5 @@ var App = {
     FormView.setStatus(false);
   }
 };
+
+// Complete Bare Minimum Requirements
